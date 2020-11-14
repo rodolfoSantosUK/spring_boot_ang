@@ -1,5 +1,6 @@
 package br.com.spring.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +24,15 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor 
 @Entity(name = "user")
-public class User {
+public class User implements Serializable {
 	 
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -42,10 +50,10 @@ public class User {
 	@Enumerated(EnumType.STRING)
 	private Role role;
 	
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "owner")
     private List<Request> requests = new ArrayList<Request>();	
     
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "owner")
 	private List<RequestStage>  requestStages = new ArrayList<RequestStage>();
 
 }
