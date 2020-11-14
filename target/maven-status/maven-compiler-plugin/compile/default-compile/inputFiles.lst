@@ -1,3 +1,6 @@
+/home/ubuntu20/dev/stsworkspace/spring_boot_ang/src/main/java/br/com/spring/repository/RequestStageRepository.java
+/home/ubuntu20/dev/stsworkspace/spring_boot_ang/src/main/java/br/com/spring/repository/UserRepository.java
+/home/ubuntu20/dev/stsworkspace/spring_boot_ang/src/main/java/br/com/spring/repository/RequestRepository.java
 /home/ubuntu20/dev/stsworkspace/spring_boot_ang/src/main/java/br/com/spring/SpringCourseApplication.java
 /home/ubuntu20/dev/stsworkspace/spring_boot_ang/src/main/java/br/com/spring/domain/RequestStage.java
 /home/ubuntu20/dev/stsworkspace/spring_boot_ang/src/main/java/br/com/spring/domain/User.java

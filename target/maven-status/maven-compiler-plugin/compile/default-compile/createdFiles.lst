@@ -1,6 +1,9 @@
+br/com/spring/repository/UserRepository.class
 br/com/spring/SpringCourseApplication.class
+br/com/spring/repository/RequestStageRepository.class
 br/com/spring/domain/User.class
 br/com/spring/enuns/RequestState.class
+br/com/spring/repository/RequestRepository.class
 br/com/spring/enuns/Role.class
 br/com/spring/domain/RequestStage.class
 br/com/spring/domain/Request.class
