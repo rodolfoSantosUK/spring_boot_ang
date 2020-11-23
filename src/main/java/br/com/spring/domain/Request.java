@@ -19,6 +19,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import br.com.spring.enuns.RequestState;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -59,6 +61,7 @@ public class Request implements Serializable {
 	@JoinColumn(name = "owner_id")
 	private User owner;
 	
+	@Getter(onMethod = @__({@JsonIgnore}))
 	@OneToMany(mappedBy = "request")
 	private List<RequestStage> stages = new ArrayList<RequestStage>();
 	

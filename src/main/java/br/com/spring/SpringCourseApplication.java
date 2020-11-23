@@ -8,8 +8,7 @@ import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
 @EntityScan(basePackages = {"br.com.spring.*"})
-@ComponentScan({"br.*"})
-@Profile("default")
+@ComponentScan({"br.*"}) 
 public class SpringCourseApplication {
 
 	public static void main(String[] args) {

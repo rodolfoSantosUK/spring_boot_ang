@@ -1,4 +1,5 @@
 package br.com.spring.service;
+ 
 
 import java.util.Date;
 import java.util.List;
@@ -6,48 +7,46 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import br.com.spring.domain.Request;
-import br.com.spring.domain.User;
+ 
+import br.com.spring.domain.RequestStage;
 import br.com.spring.enuns.RequestState;
-import br.com.spring.repository.RequestRepository;
-import br.com.spring.service.util.HashUtil;
+import br.com.spring.repository.RequestStageRepository; 
 
 @Service
 public class RequestStageService {
 
 	@Autowired
-	private RequestRepository requestRepository;
+	private RequestStageRepository requestStageRepository;
 
-	public Request save(Request request) {
+	public RequestStage save(RequestStage requestStage) {
 
-		request.setState(RequestState.OPEN);		
-		request.setCreationDate(new Date());
+		requestStage.setState(RequestState.OPEN);		
+		requestStage.setRealizationDate(new Date());
 		
-		Request createdRequest = requestRepository.save(request);
-		return createdRequest;
+		RequestStage createdRequestStage = requestStageRepository.save(requestStage);
+		return createdRequestStage;
 		
 	}
 
-	public Request update(Request request) {
-		Request updatedRequest = requestRepository.save(request);
-		return updatedRequest;
+	public RequestStage update(RequestStage request) {
+		RequestStage updatedRequestStage = requestStageRepository.save(request);
+		return updatedRequestStage;
 	}
 
-	public Request getById(Long id) {
-		Optional<Request> result = requestRepository.findById(id);
+	public RequestStage getById(Long id) {
+		Optional<RequestStage> result = requestStageRepository.findById(id);
 		return result.get();
 	}
 	
 	
-	public List<Request> listAll() {
-		 List<Request>  requests = requestRepository.findAll();
-		 return requests;
+	public List<RequestStage> listAll() {
+		 List<RequestStage>  requestsStages = requestStageRepository.findAll();
+		 return requestsStages;
 	}
 	
 	
-	public List<Request> listAllByOwnerId(Long ownerId) {
-		 List<Request>  requests = requestRepository.findAllByOwnerId(ownerId);
+	public List<RequestStage> listAllByRequestId(Long ownerId) {
+		 List<RequestStage>  requests = requestStageRepository.findAllByRequestId(ownerId);
 		 return requests;
 	}
 	

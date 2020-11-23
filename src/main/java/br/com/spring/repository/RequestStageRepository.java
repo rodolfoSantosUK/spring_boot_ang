@@ -9,6 +9,6 @@ import br.com.spring.domain.RequestStage;
 public interface RequestStageRepository extends JpaRepository<RequestStage, Long> {
 
 	
-	public List<RequestStageRepository> findAllByRequestId(Long id);
+	public List<RequestStage> findAllByRequestId(Long id);
 	
 }
